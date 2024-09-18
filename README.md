@@ -1,50 +1,110 @@
 # Car Price Predictor
 
-Project link: https://car-price-price.herokuapp.com
-Demo Video: https://youtu.be/HEaFU68WAPM
+## Overview
 
-<img src="https://github.com/rajtilakls2510/car_price_predictor/blob/master/demo.png">
+The **Car Price Predictor** is a web application that predicts the price of a car based on user-provided details. This application uses a machine learning model to estimate car prices, and it provides a user-friendly interface to input data and receive predictions.
 
+## Features
 
+- **Predict Car Prices**: Estimate the price of a car based on features such as company, model, year of purchase, fuel type, and kilometers driven.
+- **Dynamic Model Loading**: Car models are dynamically loaded based on the selected car company.
+- **Responsive Design**: The application is designed to be responsive and user-friendly across different devices.
 
-# Aim
+## Technologies Used
 
-This project aims to predict the Price of an used Car by taking it's Company name, it's Model name, Year of Purchase, and other parameters.
+- **Frontend**: HTML, CSS, Bootstrap, JavaScript
+- **Backend**: Flask
+- **Machine Learning**: Python with scikit-learn
+- **Dependencies**: TensorFlow.js for future integrations (optional)
 
-<img src="https://github.com/rajtilakls2510/car_price_predictor/blob/master/predict.png">
+## Installation
 
-## How to use?
+To set up and run the Car Price Predictor locally, follow these steps:
 
-1. Clone the repository
-2. Install the required packages in "requirements.txt" file.
+### Prerequisites
 
-Some packages are:
- - numpy 
- - pandas 
- - scikit-learn
+- Python 3.x
+- Flask
+- scikit-learn
+- TensorFlow (if used in the future)
 
-3. Run the "application.py" file
-And you are good to go. 
+### Steps
 
-# Description
+1. **Clone the Repository**
 
-## What this project does?
+    ```bash
+    git clone https://github.com/mtptisid/ML_CAR_PRICE_PREDICTION_MODEL.git
+    cd car-price-predictor
+    ```
 
-1. This project takes the parameters of an used car like: Company name, Model name, Year of Purchase, Fuel Type and Number of Kilometers it has been driven.
-2. It then predicts the possible price of the car. For example, the image below shows the predicted price of our Hyundai Grand i10. 
+2. **Set Up a Virtual Environment**
 
-<img src="https://github.com/rajtilakls2510/car_price_predictor/blob/master/predict.png">
+    ```bash
+    python -m venv venv
+    source venv/bin/activate   # On Windows use `venv\Scripts\activate`
+    ```
 
-## How this project does?
+3. **Install Dependencies**
 
-1. First of all the data was scraped from Quikr.com (https://quikr.com) 
-Link for data: https://github.com/rajtilakls2510/car_price_predictor/blob/master/quikr_car.csv
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-2. The data was cleaned (it was super unclean :( ) and analysed.
+4. **Prepare Your Model**
 
-3. Then a Linear Regression model was built on top of it which had 0.92 R2_score.
+    Ensure your machine learning model (`LinearRegressionModel.pkl`) and the dataset (`Cleaned_Car_data.csv`) are in the appropriate directories.
 
-Link for notebook: https://github.com/rajtilakls2510/car_price_predictor/blob/master/Quikr%20Analysis.ipynb
+5. **Run the Application**
 
-4. This project was given the form of an website built on Flask where we used the Linear Regression model to perform predictions.
+    ```bash
+    python application.py
+    ```
 
+6. **Open Your Browser**
+
+    Navigate to `http://127.0.0.1:5000` to view and interact with the application.
+
+## Usage
+
+1. **Select Company**: Choose the car company from the dropdown menu.
+2. **Select Model**: Select the car model based on the chosen company.
+3. **Enter Details**: Provide the year of purchase, fuel type, and kilometers driven.
+4. **Predict Price**: Click the "Predict Price" button to get the estimated price of the car.
+
+## Development
+
+To contribute to the development of this project:
+
+1. **Fork the Repository**
+2. **Create a New Branch**
+
+    ```bash
+    git checkout -b feature/your-feature
+    ```
+
+3. **Make Changes**
+4. **Commit Your Changes**
+
+    ```bash
+    git add .
+    git commit -m "Add your commit message"
+    ```
+
+5. **Push to Your Branch**
+
+    ```bash
+    git push origin feature/your-feature
+    ```
+
+6. **Create a Pull Request**
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any inquiries or feedback, please contact:
+
+- **Email**: msidrm455@gmail.com
+- **GitHub**: [mtptisid](https://github.com/mtptisid)
